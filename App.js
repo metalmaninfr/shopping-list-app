@@ -19,7 +19,7 @@ const App = () => {
   };
 
   const addItem = text => {
-    const id = items[items.length - 1].id + 1;
+    const id = items[items.length - 1]?.id + 1 || 0;
     if (!text) {
       return Alert.alert('Error', 'Please enter an item', {text: 'ok'});
     }
